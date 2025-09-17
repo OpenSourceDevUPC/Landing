@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GeoPs - Tu plataforma de descuentos</title>
+    <link rel="stylesheet" href="public/css/styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="public/images/logo.png" alt="GeoPs" class="logo-img">
+                </div>
+                
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <span class="hamburger-icon">&#9776;</span>
+                    <span class="close-icon">&#10006;</span>
+                </button>
+                
+                <!-- Desktop Navigation -->
+                <nav class="main-nav">
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#marcas">Marcas</a></li>
+                        <li><a href="#conoce-mas">Conoce más</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <div class="search-bar">
+                        <input type="text" placeholder="Buscar...">
+                        <button type="submit">
+                            <img src="public/images/search.png" alt="Search" class="search-icon">
+                        </button>
+                    </div>
+                    <button class="login-btn">Iniciar Sesión</button>
+                </div>
+                
+                <!-- Mobile Menu Dropdown -->
+                <div class="mobile-menu">
+                    <nav class="mobile-nav">
+                        <ul>
+                            <li><a href="#inicio">Inicio</a></li>
+                            <li><a href="#marcas">Marcas</a></li>
+                            <li><a href="#conoce-mas">Conoce más</a></li>
+                        </ul>
+                    </nav>
+                    <div class="mobile-actions">
+                        <div class="mobile-search">
+                            <input type="text" placeholder="Buscar...">
+                            <button type="submit">
+                                <img src="public/images/search.png" alt="Search" class="search-icon">
+                            </button>
+                        </div>
+                        <button class="mobile-login-btn">Iniciar Sesión</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="inicio">
+        <div class="container">
+            <div class="hero-grid">
+                <!-- Left Column -->
+                <div class="hero-left">
+                    <!-- Ver Ofertas Card (Top) -->
+                    <div class="hero-card offers-card">
+                        <div class="card-background">
+                            <div class="card-content">
+                                <button class="btn-secondary">Ver ofertas</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Diversión Card (Bottom) -->
+                    <div class="hero-card diversion-card">
+                        <div class="card-background">
+                            <div class="card-content">
+                                <h2>DIVIÉRTETE CON MENOS DE S/29.90</h2>
+                                <button class="btn-secondary">Más información ↗</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Right Column - Main Carousel -->
+                <div class="hero-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide active">
+                            <img src="public/images/carrousel-1.jpg" alt="Hello Kitty">
+                            <div class="carousel-overlay">
+                                <div class="experience-badge">EXPERIENCIA INMERSIVA</div>
+                                <h2>Hello Kitty And Friends<br>- Jockey Plaza</h2>
+                                <div class="price">S/40</div>
+                                <button class="btn-primary">Ver Más</button>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="public/images/juego.jpg" alt="Carousel image 1">
+                            <div class="carousel-overlay">
+                                <h2>Promoción Especial</h2>
+                                <div class="price">S/35</div>
+                                <button class="btn-primary">Ver Más</button>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="public/images/coney-park.jpg" alt="Coney Park">
+                            <div class="carousel-overlay">
+                                <h2>Coney Park</h2>
+                                <div class="price">S/45</div>
+                                <button class="btn-primary">Ver Más</button>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="public/images/cinemark.jpg" alt="Cinemark">
+                            <div class="carousel-overlay">
+                                <h2>Cinemark</h2>
+                                <div class="price">S/25</div>
+                                <button class="btn-primary">Ver Más</button>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="public/images/diversion.jpg" alt="Diversión">
+                            <div class="carousel-overlay">
+                                <h2>Diversión Garantizada</h2>
+                                <div class="price">S/30</div>
+                                <button class="btn-primary">Ver Más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators">
+                        <span class="indicator active" onclick="goToSlide(0)"></span>
+                        <span class="indicator" onclick="goToSlide(1)"></span>
+                        <span class="indicator" onclick="goToSlide(2)"></span>
+                        <span class="indicator" onclick="goToSlide(3)"></span>
+                        <span class="indicator" onclick="goToSlide(4)"></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Promotions Bar -->
+    <section class="promotions-bar">
+        <div class="promo-scroll-container">
+            <div class="promo-scroll-content">
+                <span class="promo-item">📍 Promociones exclusivas según tu ubicación 📍</span>
+                <span class="promo-item">✨ 8% en salud y bienestar con tu Plan Premium ✨</span>
+                <span class="promo-item">📍 Promociones exclusivas según tu ubicación 📍</span>
+                <span class="promo-item">✨ 8% en salud y bienestar con tu Plan Premium ✨</span>
+                <span class="promo-item">📍 Promociones exclusivas según tu ubicación 📍</span>
+                <span class="promo-item">✨ 8% en salud y bienestar con tu Plan Premium ✨</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Cards Section -->
+    <section class="category-section">
+        <div class="container">
+            <div class="category-grid">
+                <div class="category-card">
+                    <div class="category-content">
+                        <h3>Ofertas para disfrutar en tus locales favoritos</h3>
+                    </div>
+                    <img src="public/images/tienda-shopping.jpg" alt="Locales favoritos" class="category-image">
+                </div>
+                <div class="category-card">
+                    <div class="category-content">
+                        <h3>Promociones en cine, conciertos y diversión</h3>
+                    </div>
+                    <img src="public/images/cineplanet.jpg" alt="Cine y diversión" class="category-image">
+                </div>
+                <div class="category-card">
+                    <div class="category-content">
+                        <h3>Beneficios en boticas, clínicas y cuidado personal</h3>
+                    </div>
+                    <img src="public/images/madam-tusan.jpg" alt="Cuidado personal" class="category-image">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Brands Section -->
+    <section class="brands-section" id="marcas">
+        <div class="container">
+            <h2>Marcas que <em>confían</em> en GeoPs</h2>
+            <div class="brands-grid">
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <img src="public/images/c-logo.png" alt="C" class="brand-image">
+                    </div>
+                    <div class="brand-info">
+                        <div class="discount">6%</div>
+                        <div class="brand-text">descuento exclusivo GeoPs</div>
+                    </div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <img src="public/images/coney-park-logo.png" alt="Coney Park" class="brand-image">
+                    </div>
+                    <div class="brand-info">
+                        <div class="discount">6%</div>
+                        <div class="brand-text">en promociones Coney Park</div>
+                    </div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <img src="public/images/farenet-logo.png" alt="Farenet" class="brand-image">
+                    </div>
+                    <div class="brand-info">
+                        <div class="discount">4%</div>
+                        <div class="brand-text">en oferta hoy</div>
+                    </div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <img src="public/images/pet-center-logo.png" alt="Pet Center" class="brand-image">
+                    </div>
+                    <div class="brand-info">
+                        <div class="discount">8%</div>
+                        <div class="brand-text">con tu plan Premium</div>
+                    </div>
+                </div>
+                <div class="brand-card">
+                    <div class="brand-logo">
+                        <img src="public/images/bembos-logo.png" alt="Bembos" class="brand-image">
+                    </div>
+                    <div class="brand-info">
+                        <div class="discount">5%</div>
+                        <div class="brand-text">en compras seleccionadas</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-section" id="conoce-mas">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="placeholder-pattern"></div>
+                </div>
+                <div class="about-text">
+                    <h2>¿Quiénes somos?</h2>
+                    <p>Geo Publicity Service (GeoPs) es una plataforma creada por estudiantes de Ingeniería de Software en Perú. Conectamos consumidores con negocios locales mediante geolocalización y notificaciones inteligentes, brindando ofertas de valor y beneficios exclusivos.</p>
+                    <button class="btn-primary">Conoce Más</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Plans Section -->
+    <section class="plans-section">
+        <div class="container">
+            <h2>Elige tu plan ideal</h2>
+            <p class="plans-subtitle">GeoPs tiene beneficios tanto para clientes como para negocios.</p>
+            <div class="plans-grid">
+                <div class="plan-card">
+                    <h3>Plan Gratuito</h3>
+                    <div class="price">$$</div>
+                    <div class="plan-section">
+                        <h4>🔸 Para Clientes</h4>
+                        <ul class="features-list">
+                            <li>• Acceso a promociones cercanas según ubicación.</li>
+                            <li>• Notificaciones básicas de ofertas.</li>
+                            <li>• Beneficios generales de negocios aliados.</li>
+                            <li>• Acceso desde un dispositivo.</li>
+                        </ul>
+                    </div>
+                    <div class="plan-section">
+                        <h4>🔸 Para Proveedores</h4>
+                        <ul class="features-list">
+                            <li>• Publicar promociones básicas.</li>
+                            <li>• Llegar a clientes cercanos según ubicación.</li>
+                            <li>• Perfil de negocio en la plataforma.</li>
+                        </ul>
+                    </div>
+                    <button class="btn-outline">Empieza gratis</button>
+                </div>
+                <div class="plan-card featured">
+                    <h3>Plan Premium</h3>
+                    <div class="price">$$</div>
+                    <div class="plan-section">
+                        <h4>🔸 Para Clientes</h4>
+                        <ul class="features-list">
+                            <li>• Todo lo del plan gratuito.</li>
+                            <li>• Acceso a <span class="highlight">más descuentos exclusivos</span>.</li>
+                            <li>• Promociones especiales solo para usuarios Premium.</li>
+                            <li>• Prioridad en notificaciones de ofertas.</li>
+                            <li>• Beneficios adicionales en eventos o experiencias.</li>
+                        </ul>
+                    </div>
+                    <div class="plan-section">
+                        <h4>🔸 Para Proveedores</h4>
+                        <ul class="features-list">
+                            <li>• Todo lo del plan gratuito.</li>
+                            <li>• Acceso a <span class="highlight">estadísticas de marketing</span> (alcance, clics, interacción).</li>
+                            <li>• Reportes descargables en PDF/Excel.</li>
+                            <li>• Mayor visibilidad en listados de negocios.</li>
+                            <li>• Segmentación avanzada de clientes.</li>
+                            <li>• Soporte prioritario.</li>
+                        </ul>
+                    </div>
+                    <button class="btn-primary">Hazte Premium</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carousel Sections -->
+    <section class="carousel-section">
+        <div class="container">
+            <h2>Sabores con descuento</h2>
+            <div class="horizontal-carousel">
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/playa.jpg" alt="Rosa Náutica">
+                    </div>
+                    <h3>ROSA NÁUTICA</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/madam-tusan.jpg" alt="Madam Tusan">
+                    </div>
+                    <h3>MADAM TUSAN</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/siete-sopas.jpg" alt="7 Sopas">
+                    </div>
+                    <h3>7 SOPAS</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/la-bisteka-1.jpg" alt="La Bisteka">
+                    </div>
+                    <h3>LA BISTEKA</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/playa.jpg" alt="Rosa Náutica">
+                    </div>
+                    <h3>ROSA NÁUTICA</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/madam-tusan.jpg" alt="Madam Tusan">
+                    </div>
+                    <h3>MADAM TUSAN</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/siete-sopas.jpg" alt="7 Sopas">
+                    </div>
+                    <h3>7 SOPAS</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/la-bisteka-1.jpg" alt="La Bisteka">
+                    </div>
+                    <h3>LA BISTEKA</h3>
+                </div>
+            </div>
+            
+            <div class="horizontal-carousel-indicators">
+                <!-- Indicators will be generated dynamically by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="carousel-section">
+        <div class="container">
+            <h2>Diversión asegurada</h2>
+            <div class="horizontal-carousel">
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/juego.jpg" alt="Paintball Asia">
+                    </div>
+                    <h3>PAINTBALL - ASIA</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/cineplanet.jpg" alt="Cineplanet Prime">
+                    </div>
+                    <h3>CINEPLANET PRIME - SM</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/karts.jpg" alt="Formula Kart">
+                    </div>
+                    <h3>FORMULA KART - JP, ASI</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/happyland.jpg" alt="Happyland">
+                    </div>
+                    <h3>HAPPYLAND</h3>
+                </div>
+            </div>
+            <div class="horizontal-carousel-indicators">
+                <!-- Indicators will be generated dynamically by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <section class="carousel-section">
+        <div class="container">
+            <h2>Cuida tu salud con beneficios</h2>
+            <div class="horizontal-carousel">
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/bowling.jpg" alt="Aruma">
+                    </div>
+                    <h3>ARUMA</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/juego-inflable.jpg" alt="Organa">
+                    </div>
+                    <h3>ORGANA</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/diversion.jpg" alt="Army Gym">
+                    </div>
+                    <h3>ARMY GYM</h3>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-image">
+                        <img src="public/images/cinemark.jpg" alt="Smart Gym">
+                    </div>
+                    <h3>SMART GYM</h3>
+                </div>
+            </div>
+            <div class="horizontal-carousel-indicators">
+                <!-- Indicators will be generated dynamically by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content">
+                <div class="cta-left">
+                    <div class="cta-icon">
+                        <img src="public/images/stars.png" alt="Stars" class="star-icon">
+                    </div>
+                    <div class="cta-text">
+                        <h2>Haz que más clientes descubran tu negocio</h2>
+                        <p>Promociona tus productos y llega a consumidores cercanos con GeoPs.</p>
+                    </div>
+                </div>
+                <button class="btn-primary">Soy negocio, quiero unirme</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <h2>Resolvemos tus dudas</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Quiénes pueden usar GeoPs?</span>
+                        <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
+                    </div>
+                    <div class="faq-answer">
+                        <p>GeoPs está diseñado para consumidores que buscan descuentos y ofertas cerca de su ubicación, así como para negocios y comerciantes que desean promocionar sus productos y servicios a clientes locales.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué beneficios tengo como cliente?</span>
+                        <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
+                    </div>
+                    <div class="faq-answer">
+                        <p>Como cliente de GeoPs, puedes acceder a descuentos exclusivos en restaurantes, entretenimiento, salud y bienestar. Recibirás notificaciones de ofertas cercanas a tu ubicación y podrás disfrutar de promociones especiales con nuestro Plan Premium.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Qué beneficios tengo como proveedor?</span>
+                        <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
+                    </div>
+                    <div class="faq-answer">
+                        <p>Como proveedor, puedes aumentar la visibilidad de tu negocio, llegar a clientes potenciales cercanos mediante geolocalización, acceder a estadísticas de marketing detalladas y obtener reportes descargables para optimizar tus estrategias promocionales.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿GeoPs es gratis?</span>
+                        <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
+                    </div>
+                    <div class="faq-answer">
+                        <p>Sí, GeoPs ofrece un plan gratuito tanto para clientes como para proveedores. Sin embargo, también contamos con un Plan Premium que incluye beneficios adicionales como descuentos exclusivos, estadísticas avanzadas y soporte prioritario.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Cómo funciona la geolocalización?</span>
+                        <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
+                    </div>
+                    <div class="faq-answer">
+                        <p>GeoPs utiliza tu ubicación actual para mostrarte ofertas y descuentos de negocios cercanos. Solo necesitas permitir el acceso a la ubicación en tu dispositivo para recibir notificaciones personalizadas de promociones en tu área.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>¿Cómo me registro como negocio?</span>
+                        <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
+                    </div>
+                    <div class="faq-answer">
+                        <p>Puedes registrar tu negocio fácilmente haciendo clic en "Soy negocio, quiero unirme", completando el formulario con la información de tu empresa y comenzando a publicar promociones de inmediato.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Know More Section -->
+    <section class="know-more-section">
+        <div class="container">
+            <h2>Conoce más</h2>
+            <div class="know-more-grid">
+                <div class="know-more-card">
+                    <div class="card-image">
+                        <img src="public/images/playa.jpg" alt="Sobre el equipo">
+                        <div class="card-overlay">
+                            <h3>Sobre el equipo</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>Startup creada por estudiantes de Ingeniería de Software en Perú.</p>
+                    </div>
+                </div>
+                <div class="know-more-card">
+                    <div class="card-image">
+                        <img src="public/images/coney-park.jpg" alt="Sobre el producto">
+                        <div class="card-overlay">
+                            <h3>Sobre el producto</h3>
+                        </div>
+                    </div>
+                    <div class="card-content">
+                        <p>GeoPs conecta negocios y clientes con promociones inteligentes.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <div class="footer-logo">
+                        <img src="public/images/logo.png" alt="GeoPs" class="footer-logo-img">
+                        
+                    </div>
+                    <div class="footer-text">
+                        <p class="footer-tagline">Promociones cerca de ti.</p>
+                    </div>
+                    <p class="footer-copyright">© 2025 Todos los derechos reservados</p>
+                </div>
+                <div class="footer-right">
+                                        <div class="footer-social">
+                        <a href="#" aria-label="Instagram">
+                            <img src="public/images/icon-instagram.png" alt="Instagram" class="social-icon">
+                        </a>
+                        <a href="#" aria-label="LinkedIn">
+                            <img src="public/images/icon-linkedin.png" alt="LinkedIn" class="social-icon">
+                        </a>
+                    </div>
+                    <div class="footer-links">
+                        <a href="#">Nosotros</a>
+                        <a href="#">Servicios</a>
+                        <a href="#">Contacto</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="public/js/script.js"></script>
+</body>
+</html>
