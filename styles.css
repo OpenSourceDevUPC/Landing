@@ -292,7 +292,7 @@ body {
 
 .offers-card .card-background {
     background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)),
-                url('932c2ea741209758aea03c85541e02433f757afb.jpg');
+                url('tienda-shopping.jpg');
     background-size: cover;
     background-position: center;
     justify-content: center;
@@ -301,7 +301,7 @@ body {
 
 .diversion-card .card-background {
     background: linear-gradient(45deg, rgba(0,0,0,0.4), rgba(0,0,0,0.1)),
-                url('tienda-shopping.jpg');
+                url('juego-inflable.jpg');
     background-size: cover;
     background-position: center;
     align-items: flex-end;
@@ -1503,5 +1503,7 @@ body {
     
     .star-icon {
         font-size: 1.8rem;
+        width: 40px;
+        height: 40px;
     }
 }
