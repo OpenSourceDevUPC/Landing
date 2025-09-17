@@ -462,25 +462,42 @@ body {
 
 /* Promotions Bar */
 .promotions-bar {
-    background-color: var(--background-secondary);
-    padding: var(--spacing-lg) 0;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    padding: var(--spacing-md) 0;
+    overflow: hidden;
+    position: relative;
 }
 
-.promo-items {
+.promo-scroll-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+.promo-scroll-content {
     display: flex;
-    justify-content: center;
+    animation: scroll-horizontal 60s linear infinite;
+    white-space: nowrap;
     gap: var(--spacing-3xl);
 }
 
 .promo-item {
-    display: flex;
-    align-items: center;
-    gap: var(--spacing-sm);
+    color: var(--text-light);
     font-weight: var(--font-weight-medium);
+    font-size: var(--font-size-sm);
+    margin-right: var(--spacing-3xl);
+    flex-shrink: 0;
+    display: inline-flex;
+    align-items: center;
+    gap: var(--spacing-xs);
 }
 
-.promo-icon {
-    font-size: var(--font-size-lg);
+@keyframes scroll-horizontal {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /* Brands Section */
