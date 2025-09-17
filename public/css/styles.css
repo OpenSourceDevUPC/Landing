@@ -79,7 +79,7 @@ body {
 
 /* Header */
 .header {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    background: var(--primary-color);
     box-shadow: var(--shadow-medium);
     position: sticky;
     top: 0;
@@ -427,7 +427,7 @@ body {
 
 .offers-card .card-background {
     background: linear-gradient(45deg, rgba(0,0,0,0.5), rgba(0,0,0,0.2)),
-                url('tienda-shopping.jpg');
+                url('../images/tienda-shopping.jpg');
     background-size: cover;
     background-position: center;
     justify-content: center;
@@ -436,7 +436,7 @@ body {
 
 .diversion-card .card-background {
     background: linear-gradient(45deg, rgba(0,0,0,0.4), rgba(0,0,0,0.1)),
-                url('juego-inflable.jpg');
+                url('../images/juego-inflable.jpg');
     background-size: cover;
     background-position: center;
     align-items: flex-end;
@@ -620,7 +620,7 @@ body {
 
 /* Promotions Bar */
 .promotions-bar {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    background: var(--primary-color);
     padding: var(--spacing-md) 0;
     overflow: hidden;
     position: relative;
@@ -854,7 +854,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    background: var(--primary-color);
 }
 
 .placeholder-pattern::before {
@@ -864,7 +864,7 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('logo.png');
+    background-image: url('../images/logo.png');
     background-repeat: no-repeat;
     background-position: center;
     background-size: 200px auto;
@@ -1165,7 +1165,7 @@ body {
 
 /* CTA Section */
 .cta-section {
-    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+    background: var(--primary-color);
     padding: var(--spacing-3xl) 0;
     text-align: center;
     color: var(--text-light);
@@ -1609,6 +1609,10 @@ body {
     .hero-card {
         min-height: 120px;
     }
+
+    .promo-scroll-content {
+        animation: scroll-horizontal 30s linear infinite;
+    }
     
     .carousel-container {
         height: 300px;
@@ -1860,6 +1864,10 @@ body {
 
 /* Mobile responsive improvements */
 @media (max-width: 768px) {
+    .promo-scroll-content {
+        animation: scroll-horizontal 20s linear infinite;
+    }
+
     .horizontal-carousel {
         -webkit-overflow-scrolling: touch;
     }
@@ -1869,6 +1877,6 @@ body {
     }
     
     .hero-carousel {
-        padding: 0 var(--spacing-md);
+        padding: 0;
     }
 }
