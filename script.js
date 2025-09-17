@@ -25,12 +25,22 @@ function initializeCarousel() {
 }
 
 function showSlide(index) {
+    const indicators = document.querySelectorAll('.indicator');
+    
     slides.forEach((slide, i) => {
         slide.classList.remove('active');
         if (i === index) {
             slide.classList.add('active');
         }
     });
+    
+    indicators.forEach((indicator, i) => {
+        indicator.classList.remove('active');
+        if (i === index) {
+            indicator.classList.add('active');
+        }
+    });
+    
     currentSlide = index;
 }
 
@@ -42,6 +52,10 @@ function nextSlide() {
 function prevSlide() {
     const prevIndex = (currentSlide - 1 + slides.length) % slides.length;
     showSlide(prevIndex);
+}
+
+function goToSlide(index) {
+    showSlide(index);
 }
 
 // FAQ Accordion Functions
@@ -366,3 +380,4 @@ document.head.appendChild(styleSheet);
 window.nextSlide = nextSlide;
 window.prevSlide = prevSlide;
 window.toggleFAQ = toggleFAQ;
+window.goToSlide = goToSlide;

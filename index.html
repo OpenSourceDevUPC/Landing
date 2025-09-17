@@ -35,30 +35,81 @@
     <!-- Hero Section -->
     <section class="hero" id="inicio">
         <div class="container">
-            <div class="hero-carousel">
-                <div class="carousel-container">
-                    <div class="carousel-slide active">
-                        <div class="card-large">
+            <div class="hero-grid">
+                <!-- Left Column -->
+                <div class="hero-left">
+                    <!-- Ver Ofertas Card (Top) -->
+                    <div class="hero-card offers-card">
+                        <div class="card-background">
                             <div class="card-content">
-                                <h2>DIVIÉRTETE CON MENOS DE S/29.90</h2>
-                                <button class="btn-secondary">Ver ofertas 👍</button>
+                                <button class="btn-secondary">Ver ofertas</button>
                             </div>
                         </div>
                     </div>
-                    <div class="carousel-slide">
-                        <div class="card-large">
+                    
+                    <!-- Diversión Card (Bottom) -->
+                    <div class="hero-card diversion-card">
+                        <div class="card-background">
                             <div class="card-content">
-                                <h2>Hello Kitty And Friends Soccer Plaza</h2>
-                                <div class="price">S/40</div>
-                                <div class="rating">⭐⭐⭐⭐⭐</div>
-                                <button class="btn-primary">Comprar</button>
+                                <h2>DIVIÉRTETE CON MENOS DE S/29.90</h2>
+                                <button class="btn-secondary">Más información ↗</button>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-controls">
-                    <button class="carousel-btn prev" onclick="prevSlide()">‹</button>
-                    <button class="carousel-btn next" onclick="nextSlide()">›</button>
+                
+                <!-- Right Column - Main Carousel -->
+                <div class="hero-carousel">
+                    <div class="carousel-container">
+                        <div class="carousel-slide active">
+                            <img src="e0c8114ffde95f85a1622f517d4181827acb38ee.jpg" alt="Hello Kitty">
+                            <div class="carousel-overlay">
+                                <div class="experience-badge">EXPERIENCIA INMERSIVA</div>
+                                <h2>Hello Kitty And Friends<br>- Jockey Plaza</h2>
+                                <div class="price">S/40</div>
+                                <button class="btn-primary">Ver Más</button>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="carrousel-1.jpg" alt="Carousel image 1">
+                            <div class="carousel-overlay">
+                                <h2>Promoción Especial</h2>
+                                <div class="price">S/35</div>
+                                <button class="btn-primary">Ver Más</button>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="coney-park.jpg" alt="Coney Park">
+                            <div class="carousel-overlay">
+                                <h2>Coney Park</h2>
+                                <div class="price">S/45</div>
+                                <button class="btn-primary">Ver Más</button>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="cinemark.jpg" alt="Cinemark">
+                            <div class="carousel-overlay">
+                                <h2>Cinemark</h2>
+                                <div class="price">S/25</div>
+                                <button class="btn-primary">Ver Más</button>
+                            </div>
+                        </div>
+                        <div class="carousel-slide">
+                            <img src="diversion.jpg" alt="Diversión">
+                            <div class="carousel-overlay">
+                                <h2>Diversión Garantizada</h2>
+                                <div class="price">S/30</div>
+                                <button class="btn-primary">Ver Más</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-indicators">
+                        <span class="indicator active" onclick="goToSlide(0)"></span>
+                        <span class="indicator" onclick="goToSlide(1)"></span>
+                        <span class="indicator" onclick="goToSlide(2)"></span>
+                        <span class="indicator" onclick="goToSlide(3)"></span>
+                        <span class="indicator" onclick="goToSlide(4)"></span>
+                    </div>
                 </div>
             </div>
         </div>
