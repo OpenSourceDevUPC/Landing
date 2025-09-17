@@ -668,39 +668,69 @@ body {
 /* About Section */
 .about-section {
     padding: var(--spacing-3xl) 0;
-    background-color: var(--background-secondary);
+    background-color: var(--background-primary);
 }
 
 .about-content {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: var(--spacing-3xl);
+    gap: 0;
     align-items: center;
-}
-
-.about-text h2 {
-    font-size: var(--font-size-3xl);
-    font-weight: var(--font-weight-bold);
-    margin-bottom: var(--spacing-lg);
-    color: var(--text-primary);
-}
-
-.about-text p {
-    color: var(--text-secondary);
-    margin-bottom: var(--spacing-lg);
-    line-height: 1.7;
+    background-color: var(--background-card);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-medium);
+    overflow: hidden;
+    margin: var(--spacing-xl) 0;
 }
 
 .about-image {
     text-align: center;
 }
 
-.placeholder-image {
-    background-color: var(--background-card);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-3xl);
-    font-size: var(--font-size-4xl);
-    box-shadow: var(--shadow-light);
+.placeholder-pattern {
+    background-color: var(--background-secondary);
+    border-radius: 0;
+    height: 400px;
+    width: 100%;
+    position: relative;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+}
+
+.placeholder-pattern::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('logo.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 200px auto;
+    filter: brightness(0) invert(1);
+    opacity: 0.9;
+}
+
+.about-text {
+    padding: var(--spacing-3xl) var(--spacing-2xl);
+}
+
+.about-text h2 {
+    font-size: var(--font-size-2xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: var(--spacing-xl);
+    color: var(--text-primary);
+}
+
+.about-text p {
+    color: var(--text-secondary);
+    margin-bottom: var(--spacing-xl);
+    line-height: 1.6;
+    font-size: var(--font-size-base);
 }
 
 /* Plans Section */
@@ -1128,8 +1158,26 @@ body {
     
     .about-content {
         grid-template-columns: 1fr;
-        gap: var(--spacing-xl);
+        gap: 0;
         text-align: center;
+        margin: var(--spacing-lg) 0;
+    }
+    
+    .about-text {
+        padding: var(--spacing-xl) var(--spacing-lg);
+        order: 2;
+    }
+    
+    .about-image {
+        order: 1;
+    }
+    
+    .placeholder-pattern {
+        height: 200px;
+    }
+    
+    .about-text h2 {
+        font-size: var(--font-size-xl);
     }
     
     .plans-grid {
