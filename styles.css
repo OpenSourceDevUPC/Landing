@@ -405,30 +405,52 @@ body {
     text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
 }
 
-.carousel-indicators {
+.hero-carousel .carousel-indicators {
     position: absolute;
     bottom: var(--spacing-md);
     left: var(--spacing-xl);
     display: flex;
     gap: var(--spacing-sm);
+    z-index: 10;
 }
 
-.indicator {
+.hero-carousel .indicator {
     width: 12px;
     height: 12px;
     border-radius: var(--radius-full);
     background: rgba(255, 255, 255, 0.4);
     cursor: pointer;
     transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+    overflow: hidden;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
 }
 
-.indicator.active {
+.hero-carousel .indicator::before,
+.hero-carousel .indicator::after {
+    display: none !important;
+    content: none !important;
+}
+
+.hero-carousel .indicator.active {
     background: var(--primary-color);
     transform: scale(1.2);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
 }
 
-.indicator:hover {
+.hero-carousel .indicator:hover {
     background: rgba(255, 255, 255, 0.7);
+    transform: scale(1.1);
+}
+
+.hero-carousel .indicator:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.8);
 }
 
 .btn-secondary {
@@ -855,7 +877,8 @@ body {
 
 /* Carousel Sections */
 .carousel-section {
-    padding: var(--spacing-2xl) 0;
+    padding: var(--spacing-3xl) 0;
+    background-color: var(--background-primary);
 }
 
 .carousel-section h2 {
@@ -863,35 +886,146 @@ body {
     font-weight: var(--font-weight-bold);
     margin-bottom: var(--spacing-xl);
     color: var(--text-primary);
+    text-align: center;
 }
 
 .horizontal-carousel {
     display: flex;
-    gap: var(--spacing-lg);
-    overflow-x: auto;
-    padding-bottom: var(--spacing-md);
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-xl) 0;
+    min-height: 400px;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
 }
 
+/* Ensure no indicators appear on horizontal carousels */
+.horizontal-carousel .carousel-indicators,
+.horizontal-carousel .indicator {
+    display: none !important;
+}
+
+/* Horizontal Carousel Indicators */
+.horizontal-carousel-indicators {
+    display: flex;
+    justify-content: center;
+    gap: var(--spacing-sm);
+    margin-top: var(--spacing-lg);
+    padding: var(--spacing-md) 0;
+}
+
+/* h-indicator styles */
+.h-indicator {
+    width: 12px;
+    height: 12px;
+    border-radius: var(--radius-full);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+    overflow: hidden;
+    border: 1px solid var(--text-secondary);
+    outline: none;
+    box-sizing: border-box;
+}
+
+.h-indicator::before,
+.h-indicator::after {
+    display: none !important;
+    content: none !important;
+}
+
+.h-indicator.active {
+    background: var(--primary-color);
+    transform: scale(1.2);
+    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.3);
+}
+
+.h-indicator:hover {
+    background: var(--text-secondary);
+    transform: scale(1.1);
+}
+
+.h-indicator:focus {
+    outline: none;
+    background: var(--text-secondary);
+}
+
+
 .carousel-item {
-    min-width: 200px;
+    width: 300px;
+    height: 300px;
     background-color: var(--background-card);
-    border-radius: var(--radius-lg);
-    padding: var(--spacing-lg);
-    box-shadow: var(--shadow-light);
-    text-align: center;
-    transition: transform 0.3s ease;
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-medium);
+    transition: all 0.4s ease;
+    flex-shrink: 0;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
 }
 
 .carousel-item:hover {
-    transform: translateY(-4px);
-    box-shadow: var(--shadow-medium);
+    box-shadow: var(--shadow-heavy);
+}
+
+.carousel-item.center-item {
+    z-index: 3;
+}
+
+.carousel-item.side-item {
+    z-index: 2;
+    cursor: pointer;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.carousel-item:hover .carousel-image img {
+    transform: scale(1.05);
+}
+
+.carousel-image::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60%;
+    background: linear-gradient(transparent, rgba(0,0,0,0.8));
+    pointer-events: none;
 }
 
 .carousel-item h3 {
     font-size: var(--font-size-sm);
     font-weight: var(--font-weight-bold);
-    margin-top: var(--spacing-md);
-    color: var(--text-primary);
+    color: var(--text-light);
+    text-align: center;
+    padding: var(--spacing-lg);
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
 }
 
 /* CTA Section */
@@ -1230,10 +1364,20 @@ body {
     
     .horizontal-carousel {
         gap: var(--spacing-md);
+        padding: var(--spacing-sm) 0;
     }
     
     .carousel-item {
-        min-width: 150px;
+        min-width: 220px;
+    }
+    
+    .carousel-image {
+        height: 160px;
+    }
+    
+    .carousel-item h3 {
+        font-size: var(--font-size-xs);
+        padding: var(--spacing-md);
     }
     
     .footer-content {
@@ -1254,8 +1398,12 @@ body {
     }
     
     .carousel-item {
-        min-width: 120px;
+        min-width: 180px;
         padding: var(--spacing-sm);
+    }
+    
+    .carousel-image {
+        height: 140px;
     }
     
     .card-large {

@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeFAQ();
     initializeScrollAnimations();
     initializeMobileMenu();
+    initializeHorizontalCarousels();
 });
 
 // Carousel Functions
@@ -56,6 +57,122 @@ function prevSlide() {
 
 function goToSlide(index) {
     showSlide(index);
+}
+
+// Horizontal Carousel Functions
+function initializeHorizontalCarousels() {
+    const carouselSections = document.querySelectorAll('.carousel-section');
+    
+    carouselSections.forEach((section, sectionIndex) => {
+        const carousel = section.querySelector('.horizontal-carousel');
+        const items = section.querySelectorAll('.carousel-item');
+        
+        if (!carousel || !items.length) return;
+        
+        let currentIndex = 0;
+        
+        // Add click handlers to all items
+        items.forEach((item, index) => {
+            item.addEventListener('click', () => {
+                if (index !== currentIndex) {
+                    currentIndex = index;
+                    showHorizontalItems(items, currentIndex);
+                    updateHorizontalIndicators(section, currentIndex);
+                }
+            });
+        });
+        
+        // Initially show the first set of items
+        showHorizontalItems(items, currentIndex);
+        
+        // Create dots for each item
+        createDotsForCarousel(section, items.length);
+        
+        // Add click handlers to dots
+        const indicators = section.querySelectorAll('.h-indicator');
+        indicators.forEach((indicator, index) => {
+            indicator.addEventListener('click', () => {
+                currentIndex = index;
+                showHorizontalItems(items, currentIndex);
+                updateHorizontalIndicators(section, currentIndex);
+            });
+        });
+        
+        // Auto-scroll functionality
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % items.length;
+            showHorizontalItems(items, currentIndex);
+            updateHorizontalIndicators(section, currentIndex);
+        }, 4000); // Change item every 4 seconds
+    });
+}
+
+function createDotsForCarousel(section, itemCount) {
+    const indicatorsContainer = section.querySelector('.horizontal-carousel-indicators');
+    if (!indicatorsContainer) return;
+    
+    // Clear existing indicators
+    indicatorsContainer.innerHTML = '';
+    
+    // Add new indicators for each item
+    for (let i = 0; i < itemCount; i++) {
+        const indicator = document.createElement('span');
+        indicator.className = `h-indicator ${i === 0 ? 'active' : ''}`;
+        indicatorsContainer.appendChild(indicator);
+    }
+}
+
+function showHorizontalItems(items, activeIndex) {
+    const totalItems = items.length;
+    
+    items.forEach((item, index) => {
+        // Calculate positions: previous, current, next
+        const prevIndex = (activeIndex - 1 + totalItems) % totalItems;
+        const nextIndex = (activeIndex + 1) % totalItems;
+        
+        // Reset all items
+        item.style.display = 'block';
+        item.style.transition = 'all 0.4s ease';
+        item.style.transform = 'translateX(-50%) scale(1)';
+        item.style.opacity = '1';
+        item.style.zIndex = '1';
+        
+        if (index === activeIndex) {
+            // Current/center item
+            item.style.transform = 'translateX(-50%) scale(1)';
+            item.style.opacity = '1';
+            item.style.zIndex = '3';
+            item.classList.add('center-item');
+            item.classList.remove('side-item');
+        } else if (index === prevIndex) {
+            // Previous/left item
+            item.style.transform = 'translateX(-180%) scale(1)';
+            item.style.opacity = '0.7';
+            item.style.zIndex = '2';
+            item.classList.add('side-item');
+            item.classList.remove('center-item');
+        } else if (index === nextIndex) {
+            // Next/right item
+            item.style.transform = 'translateX(80%) scale(1)';
+            item.style.opacity = '0.7';
+            item.style.zIndex = '2';
+            item.classList.add('side-item');
+            item.classList.remove('center-item');
+        } else {
+            // Hidden items
+            item.style.transform = 'translateX(-50%) scale(1)';
+            item.style.opacity = '0';
+            item.style.zIndex = '1';
+            item.classList.remove('center-item', 'side-item');
+        }
+    });
+}
+
+function updateHorizontalIndicators(section, activeIndex) {
+    const indicators = section.querySelectorAll('.h-indicator');
+    indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === activeIndex);
+    });
 }
 
 // FAQ Accordion Functions
@@ -275,6 +392,11 @@ document.addEventListener('DOMContentLoaded', function() {
             header.classList.remove('scrolled');
         }
     }, 100));
+    
+    // Handle window resize for horizontal carousels
+    window.addEventListener('resize', debounce(() => {
+        initializeHorizontalCarousels();
+    }, 250));
 });
 
 // Add CSS for scroll effects and animations
