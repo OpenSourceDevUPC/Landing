@@ -181,25 +181,23 @@ function initializeFAQ() {
     
     faqQuestions.forEach(question => {
         question.addEventListener('click', function() {
-            toggleFAQ(this);
+            const faqItem = this.parentElement;
+            const isActive = faqItem.classList.contains('active');
+            
+            // Close all FAQ items
+            document.querySelectorAll('.faq-item').forEach(item => {
+                item.classList.remove('active');
+            });
+            
+            // Open clicked item if it wasn't active
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
         });
     });
 }
 
-function toggleFAQ(element) {
-    const faqItem = element.parentElement;
-    const isActive = faqItem.classList.contains('active');
-    
-    // Close all FAQ items
-    document.querySelectorAll('.faq-item').forEach(item => {
-        item.classList.remove('active');
-    });
-    
-    // Open clicked item if it wasn't active
-    if (!isActive) {
-        faqItem.classList.add('active');
-    }
-}
+// Remove the old toggleFAQ function since we're not using it anymore
 
 // Scroll Animations
 function initializeScrollAnimations() {
@@ -501,5 +499,4 @@ document.head.appendChild(styleSheet);
 // Export functions for global access
 window.nextSlide = nextSlide;
 window.prevSlide = prevSlide;
-window.toggleFAQ = toggleFAQ;
 window.goToSlide = goToSlide;
