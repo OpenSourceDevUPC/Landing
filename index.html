@@ -27,39 +27,43 @@
                 <!-- Desktop Navigation -->
                 <nav class="main-nav">
                     <ul>
-                        <li><a href="#inicio">Inicio</a></li>
-                        <li><a href="#marcas">Marcas</a></li>
-                        <li><a href="#conoce-mas">Conoce más</a></li>
+                        <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+                        <li><a href="#marcas" data-i18n="nav_marcas">Marcas</a></li>
+                        <li><a href="#conoce-mas" data-i18n="nav_conoce_mas">Conoce más</a></li>
                     </ul>
                 </nav>
                 
                 <div class="header-actions">
-                    <div class="search-bar">
-                        <input type="text" placeholder="Buscar...">
-                        <button type="submit">
-                            <img src="public/images/search.png" alt="Search" class="search-icon">
-                        </button>
+                    <!-- Language Switcher -->
+                    <div class="language-switcher">
+                        <button id="lang-en" class="lang-btn active">EN</button>
+                        <button id="lang-es" class="lang-btn">ES</button>
                     </div>
-                    <a href="https://geops-frontend.vercel.app/login" class="login-btn">Iniciar Sesión</a>
+                    <a href="https://geops-frontend.vercel.app/login" class="login-btn" data-i18n="btn_login">Iniciar Sesión</a>
                 </div>
                 
                 <!-- Mobile Menu Dropdown -->
                 <div class="mobile-menu">
                     <nav class="mobile-nav">
                         <ul>
-                            <li><a href="#inicio">Inicio</a></li>
-                            <li><a href="#marcas">Marcas</a></li>
-                            <li><a href="#conoce-mas">Conoce más</a></li>
+                            <li><a href="#inicio" data-i18n="nav_inicio">Inicio</a></li>
+                            <li><a href="#marcas" data-i18n="nav_marcas">Marcas</a></li>
+                            <li><a href="#conoce-mas" data-i18n="nav_conoce_mas">Conoce más</a></li>
                         </ul>
                     </nav>
                     <div class="mobile-actions">
+                        <!-- Language Switcher Mobile -->
+                        <div class="language-switcher">
+                            <button id="lang-en-mobile" class="lang-btn active">EN</button>
+                            <button id="lang-es-mobile" class="lang-btn">ES</button>
+                        </div>
                         <div class="mobile-search">
-                            <input type="text" placeholder="Buscar...">
+                            <input type="text" placeholder="Buscar..." data-i18n="search_placeholder">
                             <button type="submit">
                                 <img src="public/images/search.png" alt="Search" class="search-icon">
                             </button>
                         </div>
-                        <a href="https://geops-frontend.vercel.app/login" class="mobile-login-btn">Iniciar Sesión</a>
+                        <a href="https://geops-frontend.vercel.app/login" class="mobile-login-btn" data-i18n="btn_login">Iniciar Sesión</a>
                     </div>
                 </div>
             </div>
@@ -76,7 +80,7 @@
                     <div class="hero-card offers-card">
                         <div class="card-background">
                             <div class="card-content">
-                                <button class="btn-secondary">Ver ofertas</button>
+                                <a href="https://geops-frontend.vercel.app/login" class="btn-secondary" data-i18n="hero_ver_ofertas">Ver ofertas</a>
                             </div>
                         </div>
                     </div>
@@ -85,8 +89,8 @@
                     <div class="hero-card diversion-card">
                         <div class="card-background">
                             <div class="card-content">
-                                <h2>DIVIÉRTETE CON MENOS DE S/29.90</h2>
-                                <button class="btn-secondary">Más información ↗</button>
+                                <h2 data-i18n="hero_diversion">DIVIÉRTETE CON MENOS DE S/29.90</h2>
+                                <a href="https://geops-frontend.vercel.app/login" class="btn-secondary" data-i18n="hero_mas_info">Más información ↗</a>
                             </div>
                         </div>
                     </div>
@@ -98,18 +102,18 @@
                         <div class="carousel-slide active">
                             <img src="public/images/carrousel-1.jpg" alt="Hello Kitty">
                             <div class="carousel-overlay">
-                                <div class="experience-badge">EXPERIENCIA INMERSIVA</div>
+                                <div class="experience-badge" data-i18n="hero_experiencia">EXPERIENCIA INMERSIVA</div>
                                 <h2>Hello Kitty And Friends<br>- Jockey Plaza</h2>
                                 <div class="price">S/40</div>
-                                <button class="btn-primary">Ver Más</button>
+                                <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="hero_ver_mas">Ver Más</a>
                             </div>
                         </div>
                         <div class="carousel-slide">
                             <img src="public/images/juego.jpg" alt="Carousel image 1">
                             <div class="carousel-overlay">
-                                <h2>Promoción Especial</h2>
+                                <h2 data-i18n="carousel_promo_especial">Promoción Especial</h2>
                                 <div class="price">S/35</div>
-                                <button class="btn-primary">Ver Más</button>
+                                <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="hero_ver_mas">Ver Más</a>
                             </div>
                         </div>
                         <div class="carousel-slide">
@@ -117,7 +121,7 @@
                             <div class="carousel-overlay">
                                 <h2>Coney Park</h2>
                                 <div class="price">S/45</div>
-                                <button class="btn-primary">Ver Más</button>
+                                <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="hero_ver_mas">Ver Más</a>
                             </div>
                         </div>
                         <div class="carousel-slide">
@@ -125,15 +129,15 @@
                             <div class="carousel-overlay">
                                 <h2>Cinemark</h2>
                                 <div class="price">S/25</div>
-                                <button class="btn-primary">Ver Más</button>
+                                <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="hero_ver_mas">Ver Más</a>
                             </div>
                         </div>
                         <div class="carousel-slide">
                             <img src="public/images/diversion.jpg" alt="Diversión">
                             <div class="carousel-overlay">
-                                <h2>Diversión Garantizada</h2>
+                                <h2 data-i18n="carousel_diversion_garantizada">Diversión Garantizada</h2>
                                 <div class="price">S/30</div>
-                                <button class="btn-primary">Ver Más</button>
+                                <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="hero_ver_mas">Ver Más</a>
                             </div>
                         </div>
                     </div>
@@ -153,12 +157,12 @@
     <section class="promotions-bar">
         <div class="promo-scroll-container">
             <div class="promo-scroll-content">
-                <span class="promo-item">📍 Promociones exclusivas según tu ubicación 📍</span>
-                <span class="promo-item">✨ 8% en salud y bienestar con tu Plan Premium ✨</span>
-                <span class="promo-item">📍 Promociones exclusivas según tu ubicación 📍</span>
-                <span class="promo-item">✨ 8% en salud y bienestar con tu Plan Premium ✨</span>
-                <span class="promo-item">📍 Promociones exclusivas según tu ubicación 📍</span>
-                <span class="promo-item">✨ 8% en salud y bienestar con tu Plan Premium ✨</span>
+                <span class="promo-item" data-i18n="promo_ubicacion">📍 Promociones exclusivas según tu ubicación 📍</span>
+                <span class="promo-item" data-i18n="promo_salud">✨ 8% en salud y bienestar con tu Plan Premium ✨</span>
+                <span class="promo-item" data-i18n="promo_ubicacion">📍 Promociones exclusivas según tu ubicación 📍</span>
+                <span class="promo-item" data-i18n="promo_salud">✨ 8% en salud y bienestar con tu Plan Premium ✨</span>
+                <span class="promo-item" data-i18n="promo_ubicacion">📍 Promociones exclusivas según tu ubicación 📍</span>
+                <span class="promo-item" data-i18n="promo_salud">✨ 8% en salud y bienestar con tu Plan Premium ✨</span>
             </div>
         </div>
     </section>
@@ -169,19 +173,19 @@
             <div class="category-grid">
                 <div class="category-card">
                     <div class="category-content">
-                        <h3>Ofertas para disfrutar en tus locales favoritos</h3>
+                        <h3 data-i18n="category_locales">Ofertas para disfrutar en tus locales favoritos</h3>
                     </div>
                     <img src="public/images/tienda-shopping.jpg" alt="Locales favoritos" class="category-image">
                 </div>
                 <div class="category-card">
                     <div class="category-content">
-                        <h3>Promociones en cine, conciertos y diversión</h3>
+                        <h3 data-i18n="category_cine">Promociones en cine, conciertos y diversión</h3>
                     </div>
                     <img src="public/images/cineplanet.jpg" alt="Cine y diversión" class="category-image">
                 </div>
                 <div class="category-card">
                     <div class="category-content">
-                        <h3>Beneficios en boticas, clínicas y cuidado personal</h3>
+                        <h3 data-i18n="category_boticas">Beneficios en boticas, clínicas y cuidado personal</h3>
                     </div>
                     <img src="public/images/madam-tusan.jpg" alt="Cuidado personal" class="category-image">
                 </div>
@@ -192,7 +196,7 @@
     <!-- Brands Section -->
     <section class="brands-section" id="marcas">
         <div class="container">
-            <h2>Marcas que <em>confían</em> en GeoPs</h2>
+            <h2 data-i18n="brands_title">Marcas que <em>confían</em> en GeoPs</h2>
             <div class="brands-grid">
                 <div class="brand-card">
                     <div class="brand-logo">
@@ -200,7 +204,7 @@
                     </div>
                     <div class="brand-info">
                         <div class="discount">6%</div>
-                        <div class="brand-text">descuento exclusivo GeoPs</div>
+                        <div class="brand-text" data-i18n="brands_descuento">descuento exclusivo GeoPs</div>
                     </div>
                 </div>
                 <div class="brand-card">
@@ -209,7 +213,7 @@
                     </div>
                     <div class="brand-info">
                         <div class="discount">6%</div>
-                        <div class="brand-text">en promociones Coney Park</div>
+                        <div class="brand-text" data-i18n="brands_promociones">en promociones Coney Park</div>
                     </div>
                 </div>
                 <div class="brand-card">
@@ -218,7 +222,7 @@
                     </div>
                     <div class="brand-info">
                         <div class="discount">4%</div>
-                        <div class="brand-text">en oferta hoy</div>
+                        <div class="brand-text" data-i18n="brands_oferta">en oferta hoy</div>
                     </div>
                 </div>
                 <div class="brand-card">
@@ -227,7 +231,7 @@
                     </div>
                     <div class="brand-info">
                         <div class="discount">8%</div>
-                        <div class="brand-text">con tu plan Premium</div>
+                        <div class="brand-text" data-i18n="brands_premium">con tu plan Premium</div>
                     </div>
                 </div>
                 <div class="brand-card">
@@ -236,7 +240,7 @@
                     </div>
                     <div class="brand-info">
                         <div class="discount">5%</div>
-                        <div class="brand-text">en compras seleccionadas</div>
+                        <div class="brand-text" data-i18n="brands_compras">en compras seleccionadas</div>
                     </div>
                 </div>
             </div>
@@ -251,9 +255,9 @@
                     <div class="placeholder-pattern"></div>
                 </div>
                 <div class="about-text">
-                    <h2>¿Quiénes somos?</h2>
-                    <p>Geo Publicity Service (GeoPs) es una plataforma creada por estudiantes de Ingeniería de Software en Perú. Conectamos consumidores con negocios locales mediante geolocalización y notificaciones inteligentes, brindando ofertas de valor y beneficios exclusivos.</p>
-                    <button class="btn-primary">Conoce Más</button>
+                    <h2 data-i18n="about_title">¿Quiénes somos?</h2>
+                    <p data-i18n="about_text">Geo Publicity Service (GeoPs) es una plataforma creada por estudiantes de Ingeniería de Software en Perú. Conectamos consumidores con negocios locales mediante geolocalización y notificaciones inteligentes, brindando ofertas de valor y beneficios exclusivos.</p>
+                    <button class="btn-primary" data-i18n="about_btn">Conoce Más</button>
                 </div>
             </div>
         </div>
@@ -262,56 +266,56 @@
     <!-- Plans Section -->
     <section class="plans-section">
         <div class="container">
-            <h2>Elige tu plan ideal</h2>
-            <p class="plans-subtitle">GeoPs tiene beneficios tanto para clientes como para negocios.</p>
+            <h2 data-i18n="plans_title">Elige tu plan ideal</h2>
+            <p class="plans-subtitle" data-i18n="plans_subtitle">GeoPs tiene beneficios tanto para clientes como para negocios.</p>
             <div class="plans-grid">
                 <div class="plan-card">
-                    <h3>Plan Gratuito</h3>
+                    <h3 data-i18n="plan_gratuito">Plan Gratuito</h3>
                     <div class="price">$$</div>
                     <div class="plan-section">
-                        <h4>🔸 Para Clientes</h4>
+                        <h4 data-i18n="plan_clientes">🔸 Para Clientes</h4>
                         <ul class="features-list">
-                            <li>• Acceso a promociones cercanas según ubicación.</li>
-                            <li>• Notificaciones básicas de ofertas.</li>
-                            <li>• Beneficios generales de negocios aliados.</li>
-                            <li>• Acceso desde un dispositivo.</li>
+                            <li data-i18n="plan_free_c1">• Acceso a promociones cercanas según ubicación.</li>
+                            <li data-i18n="plan_free_c2">• Notificaciones básicas de ofertas.</li>
+                            <li data-i18n="plan_free_c3">• Beneficios generales de negocios aliados.</li>
+                            <li data-i18n="plan_free_c4">• Acceso desde un dispositivo.</li>
                         </ul>
                     </div>
                     <div class="plan-section">
-                        <h4>🔸 Para Proveedores</h4>
+                        <h4 data-i18n="plan_proveedores">🔸 Para Proveedores</h4>
                         <ul class="features-list">
-                            <li>• Publicar promociones básicas.</li>
-                            <li>• Llegar a clientes cercanos según ubicación.</li>
-                            <li>• Perfil de negocio en la plataforma.</li>
+                            <li data-i18n="plan_free_p1">• Publicar promociones básicas.</li>
+                            <li data-i18n="plan_free_p2">• Llegar a clientes cercanos según ubicación.</li>
+                            <li data-i18n="plan_free_p3">• Perfil de negocio en la plataforma.</li>
                         </ul>
                     </div>
-                    <button class="btn-outline">Empieza gratis</button>
+                    <a href="https://geops-frontend.vercel.app/login" class="btn-outline" data-i18n="plan_btn_free">Empieza gratis</a>
                 </div>
                 <div class="plan-card featured">
-                    <h3>Plan Premium</h3>
+                    <h3 data-i18n="plan_premium">Plan Premium</h3>
                     <div class="price">$$</div>
                     <div class="plan-section">
-                        <h4>🔸 Para Clientes</h4>
+                        <h4 data-i18n="plan_clientes">🔸 Para Clientes</h4>
                         <ul class="features-list">
-                            <li>• Todo lo del plan gratuito.</li>
-                            <li>• Acceso a <span class="highlight">más descuentos exclusivos</span>.</li>
-                            <li>• Promociones especiales solo para usuarios Premium.</li>
-                            <li>• Prioridad en notificaciones de ofertas.</li>
-                            <li>• Beneficios adicionales en eventos o experiencias.</li>
+                            <li data-i18n="plan_premium_c1">• Todo lo del plan gratuito.</li>
+                            <li data-i18n="plan_premium_c2">• Acceso a <span class="highlight">más descuentos exclusivos</span>.</li>
+                            <li data-i18n="plan_premium_c3">• Promociones especiales solo para usuarios Premium.</li>
+                            <li data-i18n="plan_premium_c4">• Prioridad en notificaciones de ofertas.</li>
+                            <li data-i18n="plan_premium_c5">• Beneficios adicionales en eventos o experiencias.</li>
                         </ul>
                     </div>
                     <div class="plan-section">
-                        <h4>🔸 Para Proveedores</h4>
+                        <h4 data-i18n="plan_proveedores">🔸 Para Proveedores</h4>
                         <ul class="features-list">
-                            <li>• Todo lo del plan gratuito.</li>
-                            <li>• Acceso a <span class="highlight">estadísticas de marketing</span> (alcance, clics, interacción).</li>
-                            <li>• Reportes descargables en PDF/Excel.</li>
-                            <li>• Mayor visibilidad en listados de negocios.</li>
-                            <li>• Segmentación avanzada de clientes.</li>
-                            <li>• Soporte prioritario.</li>
+                            <li data-i18n="plan_premium_p1">• Todo lo del plan gratuito.</li>
+                            <li data-i18n="plan_premium_p2">• Acceso a <span class="highlight">estadísticas de marketing</span> (alcance, clics, interacción).</li>
+                            <li data-i18n="plan_premium_p3">• Reportes descargables en PDF/Excel.</li>
+                            <li data-i18n="plan_premium_p4">• Mayor visibilidad en listados de negocios.</li>
+                            <li data-i18n="plan_premium_p5">• Segmentación avanzada de clientes.</li>
+                            <li data-i18n="plan_premium_p6">• Soporte prioritario.</li>
                         </ul>
                     </div>
-                    <button class="btn-primary">Hazte Premium</button>
+                    <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="plan_btn_premium">Hazte Premium</a>
                 </div>
             </div>
         </div>
@@ -320,7 +324,7 @@
     <!-- Carousel Sections -->
     <section class="carousel-section">
         <div class="container">
-            <h2>Sabores con descuento</h2>
+            <h2 data-i18n="carousel_sabores">Sabores con descuento</h2>
             <div class="horizontal-carousel">
                 <div class="carousel-item">
                     <div class="carousel-image">
@@ -366,9 +370,9 @@
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-image">
-                        <img src="public/images/la-bisteka-1.jpg" alt="La Bisteka">
+                        <img src="public/images/la-bisteka-1.jpg" alt="La Bistecca">
                     </div>
-                    <h3>LA BISTEKA</h3>
+                    <h3>LA BISTECCA</h3>
                 </div>
             </div>
             
@@ -380,7 +384,7 @@
 
     <section class="carousel-section">
         <div class="container">
-            <h2>Diversión asegurada</h2>
+            <h2 data-i18n="carousel_diversion">Diversión asegurada</h2>
             <div class="horizontal-carousel">
                 <div class="carousel-item">
                     <div class="carousel-image">
@@ -415,29 +419,29 @@
 
     <section class="carousel-section">
         <div class="container">
-            <h2>Cuida tu salud con beneficios</h2>
+            <h2 data-i18n="carousel_salud">Cuida tu salud con beneficios</h2>
             <div class="horizontal-carousel">
                 <div class="carousel-item">
                     <div class="carousel-image">
-                        <img src="public/images/bowling.jpg" alt="Aruma">
+                        <img src="public/images/aruma.jpg" alt="Aruma">
                     </div>
                     <h3>ARUMA</h3>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-image">
-                        <img src="public/images/juego-inflable.jpg" alt="Organa">
+                        <img src="public/images/organa.jpg" alt="Organa">
                     </div>
                     <h3>ORGANA</h3>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-image">
-                        <img src="public/images/diversion.jpg" alt="Army Gym">
+                        <img src="public/images/army.png" alt="Army Gym">
                     </div>
                     <h3>ARMY GYM</h3>
                 </div>
                 <div class="carousel-item">
                     <div class="carousel-image">
-                        <img src="public/images/cinemark.jpg" alt="Smart Gym">
+                        <img src="public/images/smart.jpeg" alt="Smart fit">
                     </div>
                     <h3>SMART GYM</h3>
                 </div>
@@ -457,11 +461,11 @@
                         <img src="public/images/stars.png" alt="Stars" class="star-icon">
                     </div>
                     <div class="cta-text">
-                        <h2>Haz que más clientes descubran tu negocio</h2>
-                        <p>Promociona tus productos y llega a consumidores cercanos con GeoPs.</p>
+                        <h2 data-i18n="cta_title">Haz que más clientes descubran tu negocio</h2>
+                        <p data-i18n="cta_text">Promociona tus productos y llega a consumidores cercanos con GeoPs.</p>
                     </div>
                 </div>
-                <button class="btn-primary">Soy negocio, quiero unirme</button>
+                <a href="https://geops-frontend.vercel.app/login" class="btn-primary" data-i18n="cta_btn">Soy negocio, quiero unirme</a>
             </div>
         </div>
     </section>
@@ -469,60 +473,60 @@
     <!-- FAQ Section -->
     <section class="faq-section">
         <div class="container">
-            <h2>Resolvemos tus dudas</h2>
+            <h2 data-i18n="faq_title">Resolvemos tus dudas</h2>
             <div class="faq-list">
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>¿Quiénes pueden usar GeoPs?</span>
+                        <span data-i18n="faq_q1">¿Quiénes pueden usar GeoPs?</span>
                         <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
                     </div>
                     <div class="faq-answer">
-                        <p>GeoPs está diseñado para consumidores que buscan descuentos y ofertas cerca de su ubicación, así como para negocios y comerciantes que desean promocionar sus productos y servicios a clientes locales.</p>
+                        <p data-i18n="faq_a1">GeoPs está diseñado para consumidores que buscan descuentos y ofertas cerca de su ubicación, así como para negocios y comerciantes que desean promocionar sus productos y servicios a clientes locales.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>¿Qué beneficios tengo como cliente?</span>
+                        <span data-i18n="faq_q2">¿Qué beneficios tengo como cliente?</span>
                         <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
                     </div>
                     <div class="faq-answer">
-                        <p>Como cliente de GeoPs, puedes acceder a descuentos exclusivos en restaurantes, entretenimiento, salud y bienestar. Recibirás notificaciones de ofertas cercanas a tu ubicación y podrás disfrutar de promociones especiales con nuestro Plan Premium.</p>
+                        <p data-i18n="faq_a2">Como cliente de GeoPs, puedes acceder a descuentos exclusivos en restaurantes, entretenimiento, salud y bienestar. Recibirás notificaciones de ofertas cercanas a tu ubicación y podrás disfrutar de promociones especiales con nuestro Plan Premium.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>¿Qué beneficios tengo como proveedor?</span>
+                        <span data-i18n="faq_q3">¿Qué beneficios tengo como proveedor?</span>
                         <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
                     </div>
                     <div class="faq-answer">
-                        <p>Como proveedor, puedes aumentar la visibilidad de tu negocio, llegar a clientes potenciales cercanos mediante geolocalización, acceder a estadísticas de marketing detalladas y obtener reportes descargables para optimizar tus estrategias promocionales.</p>
+                        <p data-i18n="faq_a3">Como proveedor, puedes aumentar la visibilidad de tu negocio, llegar a clientes potenciales cercanos mediante geolocalización, acceder a estadísticas de marketing detalladas y obtener reportes descargables para optimizar tus estrategias promocionales.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>¿GeoPs es gratis?</span>
+                        <span data-i18n="faq_q4">¿GeoPs es gratis?</span>
                         <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
                     </div>
                     <div class="faq-answer">
-                        <p>Sí, GeoPs ofrece un plan gratuito tanto para clientes como para proveedores. Sin embargo, también contamos con un Plan Premium que incluye beneficios adicionales como descuentos exclusivos, estadísticas avanzadas y soporte prioritario.</p>
+                        <p data-i18n="faq_a4">Sí, GeoPs ofrece un plan gratuito tanto para clientes como para proveedores. Sin embargo, también contamos con un Plan Premium que incluye beneficios adicionales como descuentos exclusivos, estadísticas avanzadas y soporte prioritario.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>¿Cómo funciona la geolocalización?</span>
+                        <span data-i18n="faq_q5">¿Cómo funciona la geolocalización?</span>
                         <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
                     </div>
                     <div class="faq-answer">
-                        <p>GeoPs utiliza tu ubicación actual para mostrarte ofertas y descuentos de negocios cercanos. Solo necesitas permitir el acceso a la ubicación en tu dispositivo para recibir notificaciones personalizadas de promociones en tu área.</p>
+                        <p data-i18n="faq_a5">GeoPs utiliza tu ubicación actual para mostrarte ofertas y descuentos de negocios cercanos. Solo necesitas permitir el acceso a la ubicación en tu dispositivo para recibir notificaciones personalizadas de promociones en tu área.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <div class="faq-question">
-                        <span>¿Cómo me registro como negocio?</span>
+                        <span data-i18n="faq_q6">¿Cómo me registro como negocio?</span>
                         <img src="public/images/down-icon.svg" alt="Toggle" class="faq-toggle">
                     </div>
                     <div class="faq-answer">
-                        <p>Puedes registrar tu negocio fácilmente haciendo clic en "Soy negocio, quiero unirme", completando el formulario con la información de tu empresa y comenzando a publicar promociones de inmediato.</p>
+                        <p data-i18n="faq_a6">Puedes registrar tu negocio fácilmente haciendo clic en "Soy negocio, quiero unirme", completando el formulario con la información de tu empresa y comenzando a publicar promociones de inmediato.</p>
                     </div>
                 </div>
             </div>
@@ -532,28 +536,28 @@
     <!-- Know More Section -->
     <section class="know-more-section">
         <div class="container">
-            <h2>Conoce más</h2>
+            <h2 data-i18n="know_more_title">Conoce más</h2>
             <div class="know-more-grid">
                 <div class="know-more-card">
                     <div class="card-image">
-                        <img src="public/images/playa.jpg" alt="Sobre el equipo">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/NhQioYMtlVI?start=13" title="Sobre el equipo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         <div class="card-overlay">
-                            <h3>Sobre el equipo</h3>
+                            <h3 data-i18n="know_more_team">Sobre el equipo</h3>
                         </div>
                     </div>
                     <div class="card-content">
-                        <p>Startup creada por estudiantes de Ingeniería de Software en Perú.</p>
+                        <p data-i18n="know_more_team_desc">Startup creada por estudiantes de Ingeniería de Software en Perú.</p>
                     </div>
                 </div>
                 <div class="know-more-card">
                     <div class="card-image">
-                        <img src="public/images/coney-park.jpg" alt="Sobre el producto">
+                        <iframe width="100%" height="100%" src="https://www.youtube.com/embed/e8-8cvBD7Xs" title="Sobre el producto" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                         <div class="card-overlay">
-                            <h3>Sobre el producto</h3>
+                            <h3 data-i18n="know_more_product">Sobre el producto</h3>
                         </div>
                     </div>
                     <div class="card-content">
-                        <p>GeoPs conecta negocios y clientes con promociones inteligentes.</p>
+                        <p data-i18n="know_more_product_desc">GeoPs conecta negocios y clientes con promociones inteligentes.</p>
                     </div>
                 </div>
             </div>
@@ -570,9 +574,9 @@
                         
                     </div>
                     <div class="footer-text">
-                        <p class="footer-tagline">Promociones cerca de ti.</p>
+                        <p class="footer-tagline" data-i18n="footer_tagline">Promociones cerca de ti.</p>
                     </div>
-                    <p class="footer-copyright">© 2025 Todos los derechos reservados</p>
+                    <p class="footer-copyright" data-i18n="footer_copyright">© 2025 Todos los derechos reservados</p>
                 </div>
                 <div class="footer-right">
                                         <div class="footer-social">
@@ -584,15 +588,17 @@
                         </a>
                     </div>
                     <div class="footer-links">
-                        <a href="#">Nosotros</a>
-                        <a href="#">Servicios</a>
-                        <a href="#">Contacto</a>
+                        <a href="#" data-i18n="footer_nosotros">Nosotros</a>
+                        <a href="#" data-i18n="footer_servicios">Servicios</a>
+                        <a href="#" data-i18n="footer_contacto">Contacto</a>
+                        <a href="TERMS_AND_CONDITIONS.pdf" target="_blank" data-i18n="footer_terminos">Términos y Condiciones</a>   
                     </div>
                 </div>
             </div>
         </div>
     </footer>
 
+    <script src="public/js/i18n.js"></script>
     <script src="public/js/script.js"></script>
 </body>
 </html>
